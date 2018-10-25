@@ -14,5 +14,19 @@ public class driver{
     testArray.clear();
     System.out.println(testArray.size());
     System.out.println(testArray.isEmpty());
+    System.out.println("---set array bigger than size---");
+    System.out.println(testArray.set(0,"tuba"));
+    System.out.println(testArray.get(0));
+    System.out.println(testArray.size());
+    System.out.println(testArray.isEmpty());
+    System.out.println("---set array smaller than size---");
+    System.out.println(testArray.add("Fish"));
+    System.out.println(testArray.get(0));
+    System.out.println(testArray.size());
+    System.out.println(testArray.isEmpty());
+    System.out.println(testArray.set(0,"tuba"));
+    System.out.println(testArray.get(0));
+    System.out.println(testArray.size());
+    System.out.println(testArray.isEmpty());
   }
 }

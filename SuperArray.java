@@ -7,7 +7,7 @@ public class SuperArray{
   }
 
   public void clear(){
-    data = new String[0];
+    data = new String[10];
   }
 
   public int size(){
@@ -36,10 +36,20 @@ public class SuperArray{
     return false;
   }
 
-public String get(int index){
-  if (index < 0 || index >= size())
-    return null;
-  else
-    return data[index];
-}
+  public String get(int index){
+    if (index < 0 || index >= size())
+      return null;
+    else
+      return data[index];
+  }
+
+  public String set(int index, String value){
+    if (index < 0 || index >= size())
+      return null;
+    else
+      data[index] = value;
+    return "success!";
+  }
+
+
 }
