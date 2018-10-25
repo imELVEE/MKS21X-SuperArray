@@ -51,5 +51,15 @@ public class SuperArray{
     return "success!";
   }
 
+  private void resize(){
+    String[] temp = new String[size()];
+    for (int i = 0 ; i < data.length ; i++){
+      temp[i] = data[i];
+    }
+    data = new String[2 * size()];
+    for (int i = 0 ; i < temp.length ; i++){
+      data[i] = temp[i];
+    }
+  }
 
 }
