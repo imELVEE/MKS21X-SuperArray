@@ -33,7 +33,10 @@ public class SuperArray{
       data[size()] = value;
       return true;
     }
-    return false;
+    else {
+      resize();
+      return add(value);
+    }
   }
 
   public String get(int index){
