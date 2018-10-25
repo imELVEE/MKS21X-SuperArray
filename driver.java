@@ -6,6 +6,8 @@ public class driver{
     System.out.println(testArray.isEmpty());
     System.out.println("---Test with adding Fish---");
     System.out.println(testArray.add("Fish"));
+    System.out.println(testArray.get(0));
+    System.out.println(testArray.get(1));
     System.out.println(testArray.size());
     System.out.println(testArray.isEmpty());
     System.out.println("---clear array---");
