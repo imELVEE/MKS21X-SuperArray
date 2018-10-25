@@ -65,4 +65,8 @@ public class SuperArray{
     }
   }
 
+  public boolean contains(String target){
+    return false;
+  }
+
 }
