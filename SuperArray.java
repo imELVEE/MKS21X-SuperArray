@@ -102,7 +102,7 @@ public class SuperArray{
         temp[i] = data[i];
       }
       temp[index] = value;
-      for (int i = index + 1 ; i < size() ; i++){
+      for (int i = index + 1 ; i < data.length ; i++){
         temp[i] = data[i];
       }
       data = temp;
@@ -145,5 +145,30 @@ public class SuperArray{
     answer += "]";
     return answer;
   }
+
+  public boolean remove(String value){
+    String[] temp = new String[2 * data.length];
+    boolean notRemoved = true;
+    for (int i = 0 ; i < size() ; i++){
+      if (data[i].equals(value) && notRemoved){
+        i++;
+        notRemoved = false;
+      }
+      if (notRemoved){
+        temp[i] = data[i];
+      }
+      else{
+        temp[i - 1] = data[i];
+      }
+    }
+    data = temp;
+    if (notRemoved){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
 
 }
