@@ -61,6 +61,21 @@ public class driver{
     System.out.println(testArray.indexOf("error"));
     testArray.add(1,"Blue Fish");
     System.out.println(testArray.size());
+    System.out.println("---remove and toString---");
+    testArray.add("Red Fish");
+    testArray.add("Blue Fish");
+    testArray.add("Green Fish");
+    testArray.add("Yellow Fish");
+    testArray.add("Pink Fish");
+    testArray.add("Orange Fish");
+    testArray.add("Black Fish");
+    testArray.add("White Fish");
+    testArray.add("Purple Fish");
+    testArray.add("Brown Fish");
+    System.out.println(testArray);
+    System.out.println(testArray.remove(3));
+    System.out.println(testArray);
+
 
   }
 }

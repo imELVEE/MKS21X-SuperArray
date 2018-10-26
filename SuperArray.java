@@ -109,4 +109,41 @@ public class SuperArray{
     }
   }
 
+  public String remove(int index){
+    String[] temp = new String[2 * data.length];
+    if (index < 0 || index >= size()){
+      System.out.println("please choose a valid index");
+      return null;
+    }
+    else {
+      for (int i = 0 ; i < index ; i++){
+        temp[i] = data[i];
+      }
+      String target = data[index];
+      for (int i = index + 1 ; i < size() ; i++){
+        temp[i - 1] = data[i];
+      }
+      data = temp;
+      return target;
+    }
+  }
+
+  public String toString(){
+    String answer = "[" + data[0];
+    for (int i = 1 ; i < size() ; i++){
+      answer += ", " + data[i];
+    }
+    answer += "]";
+    return answer;
+  }
+
+  public String toStringDebug(){
+    String answer = "[" + data[0];
+    for (int i = 1 ; i < data.length ; i++){
+      answer += ", " + data[i];
+    }
+    answer += "]";
+    return answer;
+  }
+
 }
