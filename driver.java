@@ -46,6 +46,13 @@ public class driver{
     System.out.println("---test contains---");
     System.out.println(testArray.contains("Red Fish"));
     System.out.println(testArray.contains("error"));
+    System.out.println("---index of---");
+    testArray.set(3,"Red Fish");
+    testArray.set(8,"Red Fish");
+    System.out.println(testArray.indexOf("Red Fish"));
+    System.out.println(testArray.lastIndexOf("Red Fish"));
+    System.out.println(testArray.indexOf("Error"));
+    System.out.println(testArray.indexOf("error"));
 
   }
 }
