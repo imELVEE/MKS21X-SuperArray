@@ -47,11 +47,14 @@ public class SuperArray{
   }
 
   public String set(int index, String value){
+    String old;
     if (index < 0 || index >= size())
       return null;
-    else
+    else{
+      old = data[index];
       data[index] = value;
-    return "success!";
+    }
+    return old;
   }
 
   private void resize(){
@@ -102,8 +105,8 @@ public class SuperArray{
         temp[i] = data[i];
       }
       temp[index] = value;
-      for (int i = index + 1 ; i < data.length ; i++){
-        temp[i] = data[i];
+      for (int i = index ; i < data.length ; i++){
+        temp[i + 1] = data[i];
       }
       data = temp;
     }
