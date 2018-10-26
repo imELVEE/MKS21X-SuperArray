@@ -43,6 +43,9 @@ public class driver{
     System.out.println(testArray.size());
     System.out.println(testArray.add("Lonely Fish"));
     System.out.println(testArray.size());
+    System.out.println("---test contains---");
+    System.out.println(testArray.contains("Red Fish"));
+    System.out.println(testArray.contains("error"));
 
   }
 }
