@@ -92,4 +92,21 @@ public class SuperArray{
     return -1;
   }
 
+  public void add(int index, String value){
+    String[] temp = new String[2 * data.length];
+    if (index < 0 || index > size()){
+      System.out.println("please choose a valid index");
+    }
+    else{
+      for (int i = 0 ; i < index ; i++){
+        temp[i] = data[i];
+      }
+      temp[index] = value;
+      for (int i = index + 1 ; i < size() ; i++){
+        temp[i] = data[i];
+      }
+      data = temp;
+    }
+  }
+
 }

@@ -53,6 +53,14 @@ public class driver{
     System.out.println(testArray.lastIndexOf("Red Fish"));
     System.out.println(testArray.indexOf("Error"));
     System.out.println(testArray.indexOf("error"));
+    System.out.println("---add with index---");
+    testArray.clear();
+    testArray.add(0,"Red Fish");
+    System.out.println(testArray.indexOf("Red Fish"));
+    testArray.add(4,"error");
+    System.out.println(testArray.indexOf("error"));
+    testArray.add(1,"Blue Fish");
+    System.out.println(testArray.size());
 
   }
 }
