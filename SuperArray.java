@@ -6,6 +6,10 @@ public class SuperArray{
     data = new String[10];
   }
 
+  public SuperArray(int startingCapacity){
+    data = new String[startingCapacity];
+  }
+
   public void clear(){
     data = new String[10];
   }
@@ -41,7 +45,7 @@ public class SuperArray{
 
   public String get(int index){
     if (index < 0 || index >= size())
-      return null;
+      throw new IndexOutOfBoundsException("choose a valid index");
     else
       return data[index];
   }
@@ -49,7 +53,7 @@ public class SuperArray{
   public String set(int index, String value){
     String old;
     if (index < 0 || index >= size())
-      return null;
+      throw new IndexOutOfBoundsException("choose a valid index");
     else{
       old = data[index];
       data[index] = value;
@@ -62,7 +66,7 @@ public class SuperArray{
     for (int i = 0 ; i < data.length ; i++){
       temp[i] = data[i];
     }
-    data = new String[2 * size()];
+    data = new String[2 * size() + 1];
     for (int i = 0 ; i < temp.length ; i++){
       data[i] = temp[i];
     }
@@ -98,7 +102,7 @@ public class SuperArray{
   public void add(int index, String value){
     String[] temp = new String[2 * data.length];
     if (index < 0 || index > size()){
-      System.out.println("please choose a valid index");
+      throw new IndexOutOfBoundsException("please choose a valid index");
     }
     else{
       for (int i = 0 ; i < index ; i++){
@@ -115,8 +119,7 @@ public class SuperArray{
   public String remove(int index){
     String[] temp = new String[2 * data.length];
     if (index < 0 || index >= size()){
-      System.out.println("please choose a valid index");
-      return null;
+      throw new IndexOutOfBoundsException("please choose a valid index");
     }
     else {
       for (int i = 0 ; i < index ; i++){
